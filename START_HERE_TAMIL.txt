@@ -1,0 +1,133 @@
+﻿ORBIT DRIVE 3D — முதலில் இதைப் படியுங்கள்
+==========================================
+
+இது C# + WPF மூலம் உருவாக்கப்பட்ட Windows 3D flying-car arcade game.
+Silver futuristic car, 3D road, sky/orbit flight, landing, jump, obstacles,
+energy collection, boost, score, pause மற்றும் restart இதில் உள்ளன.
+
+இது ஒரு எளிய low-poly game. Tesla/Cybertruck தோற்றத்தை நினைவூட்டும்
+original car model பயன்படுத்தப்பட்டுள்ளது. Official Tesla model அல்ல.
+புகைப்படம் போன்ற graphics அல்லது realistic space-flight simulator அல்ல.
+65 m என்பது இந்த arcade game-இன் orbit threshold; உண்மையான விண்வெளி உயரம் அல்ல.
+
+1. தேவையான software
+----------------------
+• Windows computer.
+• Visual Studio 2022 updated version, அல்லது அதற்கு புதிய Visual Studio.
+  .NET 8 project-க்கு Visual Studio 2022 17.8 அல்லது அதற்கு மேல் தேவை.
+• Visual Studio Installer → Modify → Workloads:
+  “.NET desktop development” என்பதை tick செய்து install செய்யுங்கள்.
+• .NET 8 SDK நிறுவப்பட்டிருக்க வேண்டும். Runtime மட்டும் போதாது.
+  Download: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+  Windows x64 SDK தேர்வு செய்யுங்கள் (சாதாரண Intel/AMD Windows PC).
+
+Unity, database, paid assets, API key எதுவும் தேவையில்லை.
+முதல் setup/build-ல் தேவையான .NET components பெற internet தேவைப்படலாம்.
+Build முடிந்ததும் gameplay offline-ல் வேலை செய்யும்.
+
+2. ZIP extract செய்யுங்கள்
+--------------------------
+OrbitDrive3D.zip → Right-click → Extract All.
+Extract செய்யப்பட்ட OrbitDrive3D folder-ஐத் திறக்கவும்.
+ZIP-க்குள் இருந்தபடியே project-ஐ run செய்ய வேண்டாம்.
+
+3. Visual Studio-வில் திறக்கவும்
+------------------------------
+• Visual Studio → “Open a project or solution”.
+• OrbitDrive3D.sln file-ஐத் தேர்வு செய்யுங்கள்.
+• Project load / restore முடியும்வரை காத்திருங்கள்.
+• Solution Explorer-ல் OrbitDrive3D project மீது right-click செய்து,
+  தேவைப்பட்டால் “Set as Startup Project” தேர்வு செய்யுங்கள்.
+
+4. Game run செய்யுங்கள்
+-----------------------
+• மேலே Debug அல்லது Release configuration வைத்துக்கொள்ளலாம்.
+• Ctrl + F5 அழுத்துங்கள், அல்லது Start ▶ button அழுத்துங்கள்.
+• தனி game window திறக்கும்.
+• “START FLIGHT” click செய்யுங்கள் அல்லது Enter அழுத்துங்கள்.
+• Code-ஐ edit செய்ய வேண்டியதில்லை. .sln திறந்து run செய்தால் போதும்.
+
+5. Controls
+-----------
+A / D அல்லது ← / →     : இடது / வலது நகர்வு
+F                      : பறக்க ஆரம்பிக்க / மீண்டும் தரைக்கு இறங்க
+E அல்லது ↑             : உயரத்தை அதிகரிக்க (hold)
+Q அல்லது ↓             : உயரத்தை குறைக்க (hold)
+Space                  : தரையில் இருக்கும் போது jump
+Shift (hold)           : வேகமாகச் செல்ல boost
+P அல்லது Esc           : Pause / Resume
+Enter                  : Start / Resume / Game Over-க்குப் பிறகு retry
+R                      : புதிதாக restart
+C                      : Camera distance மாற்ற
+L                      : Obstacle draw distance குறைக்க / மீட்டமைக்க
+F11                    : Fullscreen / Window mode
+Alt + F4               : Game close
+
+Car தானாக முன்னால் செல்லும். நீங்கள் steer / jump / fly செய்ய வேண்டும்.
+வேறு window-க்கு மாறினால் game தானாக pause ஆகும்.
+E/Q மூலம் target altitude மாறும்; car அந்த உயரத்துக்குச் சென்று நிலைக்கும்.
+F-ஐ ஒருமுறை அழுத்தினால் 74 m உயரத்திற்கு மெதுவாகப் பறக்கும்.
+மீண்டும் F அழுத்தினால் மெதுவாகத் தரைக்கு இறங்கும்.
+
+6. முதல் தடவை விளையாடுவது எப்படி?
+---------------------------------
+• Start செய்ததும் F அழுத்தி மேலே பறக்கத் தொடங்குங்கள்.
+• A/D கொண்டு orange நிற hazards / asteroids-ஐத் தவிருங்கள்.
+• Cyan rings உள்ள energy cores-ஐ collect செய்யலாம்.
+• 65 m உயரம் சென்றதும் “ORBIT” காட்டும்.
+• பின்னர் F அழுத்தி, தடையில்லாத lane-ல் தரைக்கு இறங்குங்கள்.
+• Orbit சென்றது + தரைக்கு வந்தது + 4.5 km பயணித்தது:
+  இந்த மூன்றும் முடிந்தால் mission complete.
+• Orange obstacle-ல் மோதினால் Game Over; R அழுத்தி மீண்டும் தொடங்குங்கள்.
+• Boost battery தானாக recharge ஆகும்; energy core எடுத்தாலும் charge கூடும்.
+• Score = பயணித்த metres + ஒவ்வொரு energy core-க்கும் 250 points.
+
+7. Visual Studio திறக்காமல் run செய்ய விரும்பினால்
+------------------------------------------------
+.NET SDK install செய்த பிறகு RUN_GAME.cmd double-click செய்யலாம்.
+அது project-ஐ build செய்து game-ஐத் திறக்கும்.
+
+8. தனியாக EXE உருவாக்குவது — optional
+------------------------------------
+BUILD_EXE.cmd double-click செய்யுங்கள்.
+Build முடிந்தால் publish-win-x64 folder-ல் OrbitDrive3D.exe இருக்கும்.
+அந்த folder முழுவதையும் copy செய்து Windows x64 PC-ல் பயன்படுத்தலாம்.
+இது self-contained publish; .NET runtime-ஐயும் folder-ல் சேர்க்கும்.
+முதல் publish-க்கு internet தேவைப்படும்; output folder பெரியதாக இருக்கும்.
+ZIP-ல் prebuilt EXE சேர்க்கப்படவில்லை; source project சேர்க்கப்பட்டுள்ளது.
+
+9. பொதுவான errors
+-----------------
+“The current .NET SDK does not support targeting .NET 8.0”:
+  Visual Studio update செய்து .NET 8 SDK install செய்யுங்கள்.
+
+“dotnet is not recognized”:
+  SDK install செய்து Visual Studio / terminal-ஐ close செய்து reopen செய்யுங்கள்.
+
+Project “incompatible” அல்லது “unloaded”:
+  .NET desktop development workload install செய்யப்பட்டதா பார்க்கவும்.
+
+Restore error / NU1301:
+  Internet connection மற்றும் https://api.nuget.org அணுகலைச் சரிபார்க்கவும்.
+
+Controls வேலை செய்யவில்லை:
+  Game window-ஐ click செய்து, pause ஆகியிருந்தால் Enter அழுத்துங்கள்.
+
+Game slow:
+  F11 மூலம் window mode-க்கு வந்து window size குறைக்கவும்; L அழுத்தவும்.
+
+10. சரிபார்ப்பு நிலை
+-------------------
+• C# source, .NET 8 மற்றும் WPF reference assemblies கொண்டு compiler-ல்
+  சரிபார்க்கப்பட்டது: compilation errors இல்லை.
+• 14 gameplay logic checks pass ஆகியுள்ளன.
+• இங்கு Windows desktop இல்லாததால் 3D window-ஐ நேரடியாக open செய்து
+  visual/play testing செய்யவில்லை. Visual Studio full solution build-யும்
+  இந்த environment-ல் MSBuild process-information restriction காரணமாக
+  run செய்ய முடியவில்லை. Compiler check மற்றும் full Windows run இரண்டும் வேறு.
+
+மேலும் code structure / test details: README.md மற்றும் VALIDATION.txt.
+
+Microsoft documentation:
+https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio
+https://learn.microsoft.com/en-us/dotnet/core/compatibility/sdk/8.0/version-requirements

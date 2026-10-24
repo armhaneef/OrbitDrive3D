@@ -1,0 +1,36 @@
+ORBIT DRIVE 3D — validation record
+Date: 24 October 2026 (Asia/Colombo)
+
+SOURCE COMPILATION
+Microsoft Roslyn C# compiler 4.11.0, C# 12.
+References: Microsoft.NETCore.App.Ref 8.0.15 and
+Microsoft.WindowsDesktop.App.Ref 8.0.15.
+All game .cs files compiled together as a Windows executable assembly.
+Result: no compilation errors or warnings.
+
+GAMEPLAY CHECKS
+The supplied LogicChecks source was compiled and executed on .NET 8.0.15.
+PASS: ready state is stationary
+PASS: forward movement and frame-delta cap
+PASS: pause/resume
+PASS: left and right steering bounds
+PASS: flight to orbit and landing
+PASS: manual altitude ceiling and floor
+PASS: jump returns to ground
+PASS: boost drain and recharge
+PASS: direct obstacle collision
+PASS: different-lane obstacle avoidance
+PASS: energy collected exactly once
+PASS: reset and deterministic course
+PASS: distance alone cannot finish mission
+PASS: orbit + landing + distance completes mission
+Total: 14 passed.
+
+LIMITS
+No Windows desktop was available. The actual WPF window, appearance,
+keyboard focus, GPU performance, fullscreen behavior, save-file persistence
+and Windows publish scripts have not been exercised on Windows.
+The normal dotnet/MSBuild host failed while reading process metadata in this
+environment. Compilation used Roslyn directly instead; a full solution build
+has not been verified here. The source ZIP intentionally contains no prebuilt
+game executable.
